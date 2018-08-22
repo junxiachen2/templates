@@ -6,7 +6,7 @@ const CleanWebpackPlugin = require('clean-webpack-plugin')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 // const InlineChunkManifestHtmlWebpackPlugin = require('inline-chunk-manifest-html-webpack-plugin')
 // const AssetsRelacePlugin = require('assets-replace-webpack-plugin')
-const Config = require('./config')
+const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const pages = []
 
 // 遍历读取html文件
@@ -38,7 +38,8 @@ const webpackConfig = {
     {
       test: /\.css$/,
       use: [
-        'style-loader',
+        MiniCssExtractPlugin.loader,
+        // 'style-loader',
         'css-loader',
         {
           loader: 'postcss-loader',
@@ -62,16 +63,17 @@ const webpackConfig = {
   node: { Buffer: false },
   optimization: {
     minimizer: [
-      // we specify a custom UglifyJsPlugin here to get source maps in production
       new UglifyJsPlugin({
         uglifyOptions: {
-          // 最紧凑的输出
-          beautify: false,
-          // 删除所有的注释
-          comments: false,
+          output: {
+            // 最紧凑的输出
+            beautify: false,
+            // 删除所有的注释
+            comments: false
+          },
+          // 在UglifyJs删除没有用到的代码时不输出警告
+          warnings: false,
           compress: {
-            // 在UglifyJs删除没有用到的代码时不输出警告
-            warnings: false,
             // 删除所有的 `console` 语句
             // 还可以兼容ie浏览器
             drop_console: true,
@@ -96,7 +98,11 @@ const webpackConfig = {
     }
   },
   plugins: [
-    new CleanWebpackPlugin('build')
+    new CleanWebpackPlugin('build'),
+    new MiniCssExtractPlugin({
+      filename: '[name].css'
+      // chunkFilename: '[id].css'
+    })
     // new AssetsRelacePlugin([
     //   path.resolve(__dirname, 'withdraw.html'),
     //   path.resolve(__dirname, 'auth.html')

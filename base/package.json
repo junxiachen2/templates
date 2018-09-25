@@ -3,12 +3,10 @@
   "version": "1.0.0",
   "babel": {
     "presets": [
-      "env",
-      "react"
+      "env"
     ],
     "plugins": [
-      "transform-runtime",
-      "transform-react-remove-prop-types"
+      "transform-runtime"
     ]
   },
   "eslintConfig": {
@@ -378,8 +376,6 @@
     "html-webpack-plugin": "^3.2.0",
     "inline-chunk-manifest-html-webpack-plugin": "^2.0.0",
     "ip": "^1.1.5",
-    "js-cookie": "^2.2.0",
-    "md5": "^2.2.1",
     "postcss-adaptive": "^0.5.0",
     "postcss-adaptive-rpx": "^1.0.2",
     "postcss-loader": "^3.0.0",

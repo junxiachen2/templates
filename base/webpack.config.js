@@ -7,7 +7,6 @@ const Config = require('./config')
 
 let cmd = null
 const pages = []
-const entry = {}
 switch (process.platform) {
   case 'wind32':
     cmd = 'start'
@@ -52,9 +51,7 @@ const webpackConfig = {
     host: Config.ip,
     historyApiFallback: true,
     after: function (app) {
-      console.log('有这些页面:')
       pages.map(page => {
-        console.log(`${page}.html`)
         childProcess.exec(`${cmd} http://${Config.ip}:${Config.port}/${page}.html`)
       })
     }

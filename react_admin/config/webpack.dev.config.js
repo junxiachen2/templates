@@ -1,0 +1,67 @@
+const commonConfig = require('./webpack.common.config')
+const webpackMerge = require('webpack-merge')
+const path = require('path')
+const webpack = require('webpack')
+const process = require('process')
+const HtmlWebpackPlugin = require('html-webpack-plugin')
+const nodeModuleDir = path.resolve(process.cwd(), 'node_module')
+const ip = require('ip')
+const port = 8887
+const host = ip.address()
+const appDir = path.resolve(process.cwd(), 'app')
+const config = webpackMerge(commonConfig, {
+  mode: 'development',
+  devServer: {
+    contentBase: 'build',
+    compress: true,
+    port,
+    host,
+    historyApiFallback: true,
+    proxy: {
+      '/admin': {
+        target: 'http://10.135.40.236:16900',
+        changeOrigin: true
+      }
+    }
+  },
+  plugins: [
+    new webpack.HotModuleReplacementPlugin(),
+    new HtmlWebpackPlugin({
+      filename: `index.html`,
+      title: '',
+      template: path.join(appDir, 'index.html'),
+      inject: true,
+      chunks: ['app']
+    })
+  ],
+  module: {
+    rules: [
+      {
+        test: new RegExp(`^(?!.*\\.common).*\\.css`),
+        use: ['style-loader', 'css-loader?modules', 'postcss-loader'],
+        include: [appDir]
+      },
+      {
+        test: new RegExp(`^(?!.*\\.common).*\\.css`),
+        use: ['style-loader', 'css-loader', 'postcss-loader'],
+        include: [/[\\/]node_modules[\\/].*antd/]
+      },
+      {
+        test: new RegExp(`^(.*\\.common).*\\.css`),
+        use: ['style-loader', 'css-loader', 'postcss-loader'],
+        include: [appDir],
+        exclude: [nodeModuleDir]
+      },
+      {
+        test: /\.(png|svg|jpg|gif)$/,
+        use: [{
+          loader: 'url-loader', // file-loader
+          options: { limit: 2500 }
+        }],
+        include: [appDir],
+        exclude: [nodeModuleDir]
+      }
+    ]
+  }
+})
+module.exports = config

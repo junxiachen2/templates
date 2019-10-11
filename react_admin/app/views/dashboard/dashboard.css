@@ -1,0 +1,15 @@
+.wrap{
+  height: 100%;
+}
+.header{
+  color: '#fff';
+}
+.rightLayout{
+  flex-direction: column;
+}
+.content{
+  margin: 0 16px;
+}
+.footer{
+  text-align: center;
+}

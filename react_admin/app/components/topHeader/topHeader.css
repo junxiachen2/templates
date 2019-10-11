@@ -1,0 +1,35 @@
+.header {
+  display: flex;
+  align-items: center;
+  height: 70px;
+  color: #ffffff;
+}
+
+.logo {
+  display: inline-block;
+  width: 140px;
+  height: 34px;
+  background-color: antiquewhite;
+}
+
+.headerText {
+  font-size: 24px;
+  margin-left: 20px;
+}
+.right{
+  position: absolute;
+  right: 40px;
+  display: flex;
+  flex-direction: row;
+}
+.rightItem{
+  margin-left: 10px;
+}
+.logout{
+  padding: 0 10px 0;
+  cursor: pointer;
+}
+.icon{
+  margin-left: 6px;
+  margin-right: 6px;
+}

@@ -1,0 +1,59 @@
+.wrap {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.loginBoxTop {
+  width: 380px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 60px;
+  text-align: center;
+}
+
+.loginBox {
+  width: 380px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.loginBoxTopImg {
+  display: inline-block;
+  width: 162px;
+  height: 42px;
+  margin-right: 12px;
+}
+
+.loginBoxText {
+  display: inline;
+  font-size: 30px;
+  color: #FFFFFF;
+}
+
+.loginBtn {
+  width: 354px;
+  height: 40px;
+  margin-top: 20px;
+  background: #FDDB2E;
+  border-radius: 5px;
+  font-size: 14px;
+  color: #000000;
+  border: 0;
+}
+
+.loginBtn:hover,
+.loginBtn:focus,
+.loginBtn:active {
+  background: #FDDB2E;
+  color: #000000;
+}
+
+.input {
+  height: 40px;
+  margin-bottom: 20px;
+}

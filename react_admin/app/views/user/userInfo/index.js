@@ -1,9 +1,11 @@
 import React, { Component } from 'react'
+import style from './css.css'
 class UserInfo extends Component {
   render () {
-    console.log('user info')
     return (
-      <div>user detail</div>
+      <div>user info
+        {/* <div className={style.} */}
+      </div>
     )
   }
 }

@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { Component } from 'react'
 import { render } from 'react-dom'
 import App from './views/app'
 import Login from './views/login/login'
@@ -10,18 +10,20 @@ import './common/app.common.css'
 
 moment.locale('zh-cn')
 
-const main = () => {
-  const user = new User()
-  if (user.checkStatus()) {
-    return <App />
+class Main extends Component {
+  user = new User()
+  render () {
+    if (this.user.checkStatus()) {
+      return <App />
+    }
+    return <Login />
   }
-  return <Login />
 }
 
 window.onload = function () {
   render(
     <LocaleProvider locale={zh_CN}>
-      {main()}
+      <Main />
     </LocaleProvider>
     , document.getElementById('main'))
 }

@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
-import menuRoutes from '../../routes/config'
+import menuRoutes from '../../config/routes'
 import { Menu, Icon } from 'antd'
 
 class SiderMenu extends Component {
@@ -17,7 +17,6 @@ class SiderMenu extends Component {
   }
 
   renderSubMenu (item) {
-    console.log(item)
     return (
       <Menu.SubMenu
         key={item.key}
@@ -34,7 +33,6 @@ class SiderMenu extends Component {
   }
 
   render () {
-    console.log('sider menu')
     return (
       <Menu
         style={{ height: '100%' }}

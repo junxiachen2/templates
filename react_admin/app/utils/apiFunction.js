@@ -1,6 +1,6 @@
-import request from '../utils/asyncFetch'
+import request from './asyncFetch'
 import { message } from 'antd'
-import api from './api'
+import api from '../config/api'
 import Cookies from 'js-cookie'
 
 const gen = (params) => {

@@ -1,5 +1,5 @@
 import Cookies from 'js-cookie'
-import APIFunction from '../services/index'
+import APIFunction from '../utils/apiFunction'
 
 class User {
   constructor () {

@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { Route, Redirect, Switch } from 'react-router-dom'
 import DocumentTitle from 'react-document-title'
-import routesConfig from './config'
+import routesConfig from '../config/routes'
 import queryString from 'query-string'
 
 class CRouter extends Component {

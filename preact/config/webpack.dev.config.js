@@ -2,6 +2,7 @@ const path = require('path');
 const webpack = require('webpack');
 const { entry, template } = require('./entry');
 const { resolve } = require('./resolve');
+const IP = require('ip')
 
 // copy 目录
 const CopyPlugin = require('copy-webpack-plugin');
@@ -120,7 +121,7 @@ module.exports = {
     compress: true,
     port: 9091,
     hot: true,
-    host: '0.0.0.0',
+    host: IP.address(),
     proxy: {
       // http://47.91.110.239:17001 测试1环境
       // http://47.91.110.239:17002 测试2环境

@@ -1,0 +1,53 @@
+export default {
+  cn: {
+    days: '天',
+    cplist: 'CP榜',
+    award: '奖励',
+    head1: '送礼物成为CP',
+    head2: '本周CP',
+    head3: '上周CP',
+    head4: '活动奖励',
+    tip: 'Tips:CP榜专属礼物1金币=1CP值，CP值越高，排名越高',
+    more: '点击查看更多',
+    noDataTip: '暂无排名',
+    rule: '规则说明',
+    rule1: '1.每周二00:00:00至下周一23:59:59（沙特时间）',
+    rule2: '2.活动期间赠送CP标记礼物即可组成CP进入CP列表。',
+    rule3: '3.仅发送带有CP标记的礼物才能提高CP值，1金币等于1CP值，CP值越高，排名越高。',
+    rule4: '4.本活动最终解释权归Mashi所有。'
+  },
+  en: {
+    days: 'days',
+    cplist: 'CP list',
+    award: 'Reward',
+    head1: 'Give gifts and become CP',
+    head2: 'CP This week',
+    head3: 'CP Last week',
+    head4: 'Activity Award',
+    tip: 'Exclusive gifts for CP ranking list,one gold equals one CP point.The more the points you have gained，the higher the rank will be',
+    more: 'View more',
+    noDataTip: 'No ranking yet',
+    rule: 'Rules',
+    rule1: '1. From every Tuesday 00:00:00 to next Monday 23:59:59(SAU time)',
+    rule2: '2. Give CP mark gift during the event to form CP to enter CP list.',
+    rule3: '3. Only sending gifts marked with CP can increase the CP value. 1 gold equals 1 CP value. The higher the CP value, the higher the ranking.',
+    rule4: '4. The final interpretation of this activity belongs to Mashi.'
+  },
+  ar: {
+    days: 'أيام',
+    cplist: 'قائمة CP',
+    award: 'جائزة',
+    head1: 'قدم الهدايا وأصبح CP معه او معاها',
+    head2: 'CP هذا الأسبوع',
+    head3: 'CP الأسبوع الماضي',
+    head4: 'جائزة النشاط',
+    tip: 'للهديا الخاصة لقائمة CP،  ١عملة ذهبية تساوي١ نقط CP. إن تحصلا على النقاط الأكثر، ستكن درجتكما عليا.',
+    more: 'أر الأكثر',
+    noDataTip: 'لا يوجد ترتيب حتى الآن',
+    rule: 'القواعد',
+    rule1: '1. من كل يوم ثلاثاء 00:00:00 حتي الاثنين القادم 23:59:59 (بتوقيت السعودية)',
+    rule2: '2. قدم هدية CP خلال الحدث لتشكيل CP للدخول إلى قائمة CP.',
+    rule3: '3. فقط إرسال الهدايا التي تحمل علامة CP يمكن أن يزيد من نقطة CP.١ العملات ذهبية يساوي ١ CP نقطة. كلما ارتفعت نقطة CP ، ارتفع الترتيب.',
+    rule4: '4. التفسير النهائي لهذا النشاط ينتمي إلى ماشي'
+  }
+}

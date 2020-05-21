@@ -1,0 +1,56 @@
+{
+  "name": "preact",
+  "version": "1.0.0",
+  "description": "preact",
+  "main": "index.js",
+  "scripts": {
+    "start": "webpack-dev-server --env.NODE_ENV=dev --progress --color",
+    "build": "webpack --env.NODE_ENV=prod --progress --color"
+  },
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.6.4",
+    "@babel/plugin-proposal-class-properties": "^7.8.3",
+    "@babel/preset-env": "^7.6.3",
+    "@babel/preset-react": "^7.6.3",
+    "babel-eslint": "^10.0.3",
+    "babel-loader": "^8.0.6",
+    "babel-plugin-import": "^1.12.2",
+    "babel-plugin-transform-react-jsx": "^6.24.1",
+    "babel-plugin-transform-react-remove-prop-types": "^0.4.24",
+    "clean-webpack-plugin": "^3.0.0",
+    "copy-webpack-plugin": "^5.0.5",
+    "css-loader": "^3.2.0",
+    "cssnano": "^4.1.10",
+    "eslint": "^5.16.0",
+    "eslint-plugin-react": "^7.16.0",
+    "file-loader": "^4.2.0",
+    "html-loader": "^0.5.5",
+    "html-webpack-plugin": "^3.2.0",
+    "ip": "^1.1.5",
+    "mini-css-extract-plugin": "^0.8.0",
+    "optimize-css-assets-webpack-plugin": "^5.0.3",
+    "postcss-adaptive": "^0.5.0",
+    "postcss-cssnext": "^3.1.0",
+    "postcss-import": "^12.0.1",
+    "postcss-loader": "^3.0.0",
+    "precss": "^4.0.0",
+    "style-loader": "^1.0.0",
+    "terser-webpack-plugin": "^2.2.1",
+    "url-loader": "^2.2.0",
+    "webpack": "^4.41.1",
+    "webpack-cli": "^3.3.9",
+    "webpack-dev-server": "^3.8.2",
+    "webpack-merge": "^4.2.2",
+    "whatwg-fetch": "^3.0.0",
+    "write-file-webpack-plugin": "^4.5.1"
+  },
+  "dependencies": {
+    "core-js": "^3.3.2",
+    "preact": "^10.3.4"
+  },
+  "browserslist": [
+    "Android >= 4.1",
+    "iOS >= 9"
+  ]
+}

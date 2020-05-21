@@ -5,8 +5,6 @@ import { transformWebp } from '@utils/utils'
 import { API_getList } from '@config/api'
 import request from '@utils/request'
 
-import Footer from './components/footer'
-
 const LANG = window.lang
 
 const Main = () => {
@@ -31,8 +29,6 @@ const Main = () => {
   return (
     <>
       <div className={style[`banner-${LANG}`]}></div>
-
-      <Footer />
     </>
   )
 }

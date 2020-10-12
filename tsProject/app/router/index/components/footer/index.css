@@ -1,0 +1,13 @@
+.footer-en {
+  width: 375px;
+  height: 140px;
+  background: url(../../images/footer_en.png) center center no-repeat;
+  background-size: auto 50%;
+  margin-top: -50px;
+  transform: scale(.8);
+}
+
+.footer-ar {
+  composes: footer-en;
+  background-image: url(../../images/footer_ar.png);
+}

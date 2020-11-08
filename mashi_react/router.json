@@ -1,0 +1,8 @@
+{
+    "routers": [
+        {
+            "tplName": "index"
+        }
+    ],
+    "projectPath": "bigDiscount/" 
+}

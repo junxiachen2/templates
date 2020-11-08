@@ -1,0 +1,44 @@
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-family: "PingFangSC-Regular", "Helvetica Neue", Helvetica, "Hiragino Sans GB", "STHeitiSC-Light", "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
+  -webkit-user-select: none;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  box-sizing: border-box;
+}
+
+body, html {
+  width: 100%;
+  background: rgb(252, 123, 152);
+}
+
+html[lang='ar'] {
+  direction: rtl;
+}
+
+:global #app {
+  width: 100%;
+}
+
+.flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hide {
+  display: none;
+}
+
+.banner-en {
+  width: 375px;
+  height: 240px;
+  background: url(./images/banner_en.png);
+  background-size: contain;
+}
+
+.banner-ar {
+  composes: banner-en;
+  background-image: url(./images/banner_ar.png);
+}

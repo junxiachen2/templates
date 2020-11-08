@@ -1,0 +1,19 @@
+{
+  "compileOnSave": true,
+  "compilerOptions": {
+    "outDir": "./",
+    "allowJs": true,
+    "sourceMap": true,
+    "noImplicitAny": true,
+    "module": "es6",
+    "target": "es5",
+    "jsx": "react",
+    "allowSyntheticDefaultImports": true, // Allow default imports from modules with no default export
+    "baseUrl": "./",
+    "paths": {
+      "@*": ["app/*"]
+    }
+  },
+  "include": ["app/**/*"],
+  "exclude": ["node_modules", "build"]
+}

@@ -1,8 +1,8 @@
 const autoprefixer = require('autoprefixer')
-const adaptive = require('postcss-adaptive-rpx')
+const adaptive = require('postcss-adaptive')
 module.exports = {
   plugins: [
     autoprefixer(),
-    adaptive({ remUnit: 75 })
+    adaptive({ remUnit: 37.5, autoRem: true })
   ]
 }
